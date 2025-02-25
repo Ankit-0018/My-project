@@ -5,7 +5,7 @@ attachButt.addEventListener("click" , (e)=> {
     if(flag==0){
         const newDiv = document.createElement("div");
         newDiv.classList.add("task-container");
-        document.querySelector(".container").appendChild(newDiv)
+        document.querySelector(".menu-dropdown").appendChild(newDiv)
         flag = 1;
     }
     else {
