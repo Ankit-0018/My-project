@@ -7,10 +7,6 @@ const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-
 
 
 
-function random() {
-  return "heloo"
-}
-
 
 
 
