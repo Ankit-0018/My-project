@@ -7,25 +7,40 @@ const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-
 
 
 
+function random() {
+  return "heloo"
+}
+
 
 
 
 form.addEventListener("submit" , (e) => {
 
+ 
     let userMessage = input.value.trim();
     e.preventDefault();
     if(userMessage == "") return;
     
-    
+    console.log(e)
 
-addMessage(userMessage , "user")
+    if(e.submitter.id == "arrow"){
 
-input.value = ""
+      addMessage(userMessage , "user")
+      
+      input.value = ""
+      
+      setTimeout(()=> {
+         const res =  generateResponse(userMessage)
+         
+      } , 600);
+    }
+    else {
+      e.preventDefault()
+    }
 
-setTimeout(()=> {
-   const res =  generateResponse(userMessage)
+
+
    
-} , 600);
 
 
 });
@@ -69,11 +84,13 @@ function addMessage(text , sender){
         
  
     addMessage(finalResponse , "ai")
-    
+
     }
 
   catch (Error){
+
     console.log(Error)
+    addMessage("Failed to fetch : Network Error", "ai")
   }
 
 }

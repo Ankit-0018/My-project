@@ -72,17 +72,20 @@
 .send-attach button {
     padding: 5px 10px;
     font-size: 14px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .emoji {
     width: 20px;
     text-align: center;
 
+
 }
 
 .emoji button {
     font-size: 20px;
-    
+    cursor: pointer;
 }
 
 
